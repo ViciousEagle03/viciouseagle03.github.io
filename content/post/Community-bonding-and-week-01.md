@@ -3,6 +3,7 @@ title = 'Community Bonding and Week 01 Progress'
 date = 2024-06-08T02:15:27+05:30
 
 +++
+
 This post documents the planning of the project, my learnings during the community bonding period, and the tasks I completed in my first week.
 
 ## Community Bonding Period

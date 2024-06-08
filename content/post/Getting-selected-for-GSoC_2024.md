@@ -3,6 +3,7 @@ title = "Getting Selected for Google Summer of Code 2024"
 date = 2024-06-07T16:11:56+05:30
 
 +++
+
 Hello everyone, this marks my first blog post where I pen down my experience and learnings about getting selected for Google Summer of Code.
 
 ## What is this series about?
@@ -11,7 +12,7 @@ In this series of blog posts, I mainly plan on walking you through what it was l
 
 ![img](/images/GSoC_OA.png)
 
-> Google Summer of Code is a global, online   program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.
+> Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.
 
 ## Discovering GSoC: From Curiosity to Decision
 
