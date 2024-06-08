@@ -2,24 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Piyush Sharma</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:38967/</link>
     <description>Recent content on Piyush Sharma</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 May 2024 19:17:06 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jun 2024 02:15:27 +0530</lastBuildDate>
+    <atom:link href="http://localhost:38967/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Community Bonding and Week 01 Progress</title>
+      <link>http://localhost:38967/post/community-bonding-and-week-01/</link>
+      <pubDate>Sat, 08 Jun 2024 02:15:27 +0530</pubDate>
+      <guid>http://localhost:38967/post/community-bonding-and-week-01/</guid>
+      <description>This post documents the planning of the project, my learnings during the community bonding period, and the tasks I completed in my first week.&#xA;Community Bonding Period After the euphoria of being accepted into GSoC faded, it was time for setting up my workspace and diving back into the codebase after a month. Planning out the project was key, and meeting with my mentors was a big part of that. I was excited for this chat because the mentors had been super helpful and easy to reach during the proposal stage.</description>
+    </item>
+    <item>
+      <title>Getting Selected for Google Summer of Code 2024</title>
+      <link>http://localhost:38967/post/getting-selected-for-gsoc_2024/</link>
+      <pubDate>Fri, 07 Jun 2024 16:11:56 +0530</pubDate>
+      <guid>http://localhost:38967/post/getting-selected-for-gsoc_2024/</guid>
+      <description>Hello everyone, this marks my first blog post where I pen down my experience and learnings about getting selected for Google Summer of Code.&#xA;What is this series about? In this series of blog posts, I mainly plan on walking you through what it was like working for GSoC, what challenges I faced, and how I overcame those.&#xA;Google Summer of Code is a global, online program focused on bringing new contributors into open source software development.</description>
+    </item>
     <item>
       <title>Venturing Forward : Test Post</title>
-      <link>http://localhost:1313/post/venturing-forward/</link>
+      <link>http://localhost:38967/post/venturing-forward/</link>
       <pubDate>Thu, 16 May 2024 19:17:06 +0530</pubDate>
-      <guid>http://localhost:1313/post/venturing-forward/</guid>
+      <guid>http://localhost:38967/post/venturing-forward/</guid>
       <description>Stay posted for future updates :).</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://localhost:38967/about/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://localhost:38967/about/</guid>
       <description>I am a second-year undergraduate student at the Indian Institute of Technology, Roorkee, majoring in Mathematics and Computing.&#xA;How is the blog made? The blog is created using Hugo, a static site generator, and it&amp;rsquo;s styled with the hugo-paper theme.&#xA;Contact Information Reach me at piyushsharma04321@gmail.com</description>
     </item>
   </channel>

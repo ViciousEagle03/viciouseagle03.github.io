@@ -1,0 +1,544 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en-us"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=38967&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Community Bonding and Week 01 Progress - Piyush Sharma</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="This post documents the planning of the project, my learnings during the community bonding period, and the tasks I completed in my first week.
+Community Bonding Period After the euphoria of being accepted into GSoC faded, it was time for setting up my workspace and diving back into the codebase after a month. Planning out the project was key, and meeting with my mentors was a big part of that. I was excited for this chat because the mentors had been super helpful and easy to reach during the proposal stage." />
+  <meta name="author" content="VEagle03" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:38967/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:38967/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://rukminim2.flixcart.com/image/850/1000/kz4gh3k0/poster/j/x/1/medium-cat-glasses-space-abstract-matte-finish-poster-original-imagb787bgsvyeg7.jpeg?q=90&amp;crop=false" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:38967/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:38967/instagram.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:38967/linkedin.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:38967/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:38967/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:38967/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:38967/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.127.0">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:38967/"
+      >Piyush Sharma</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/ViciousEagle03"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/piyushs_03"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/piyush-sharma-0b559a250"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="http://localhost:38967/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Community Bonding and Week 01 Progress</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Jun 8, 2024</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>This post documents the planning of the project, my learnings during the community bonding period, and the tasks I completed in my first week.</p>
+<h2 id="community-bonding-period">Community Bonding Period</h2>
+<p>After the euphoria of being accepted into GSoC faded, it was time for setting up my workspace and diving back into the codebase after a month. Planning out the project was key, and meeting with my mentors was a big part of that. I was excited for this chat because the mentors had been super helpful and easy to reach during the proposal stage.</p>
+<h2 id="setting-the-stage-mentor-meet-up-and-project-planning">Setting the Stage: Mentor Meet-Up and Project Planning</h2>
+<p>During the meet-up, we discussed about the best approach to kick-start the development process. It was mostly the mentors discussing about the possible roadmap and as they outlined the project roadmap, I listened carefully, taking notes on important discussions. One of the key decision was to set up clear communication channels and workflows to make sure we all stay on the same page and to ensure I do not vary off of the project or get stuck in a deadend.</p>
+<p>Additionally, we agreed to use GitHub projects for project management, making it easier to keep track of tasks and monitor progress. You can check out the GitHub project here: <a href="https://github.com/orgs/sunpy/projects/12/views/1"><strong>Github Project</strong></a></p>
+<p>Apart from discussing the project proceedings, I was also tasked with setting up a blog website to document my GSoC journey and share updates with the community. I decided to use Hugo to create the blog website and deployed it through GitHub pages. Additionally, I was asked to share the RSS feed of my blog to ensure that project updates are easily accessible to everyone.</p>
+<p><img src="/images/tasks.png" alt=""></p>
+<hr>
+<h1 id="week-01-first-coding-week">Week [01]: First Coding Week</h1>
+<h2 id="a-brief-overview-about-my-project">A brief overview about my project</h2>
+<p>My projects aims to enable the storage and retrieval of NDCube objects using the ASDF file format. Currently, ndcube lacks native support for saving NDCube objects to files and loading them back, limiting its usability. To address this, the project will implement convertors and schema definitions for NDCube objects and related classes ensuring robust serialization and deserialiazation. The first phase of my project requires the complete imlementation of serialization of an <strong>ndcube.NDCube</strong> object when <code>.data</code> is a numpy array and <code>.wcs</code> is a <strong>gwcs.WCS object</strong>.</p>
+<h2 id="the-prototype">The Prototype</h2>
+<p>In our meeting, we discussed the initial steps,  which centered around laying the groundwork for serialization support for the NDCube object, particularly focusing on establishing basic functionality. This included implementing the convertor class, registering the convertors as ASDF extensions, and ensuring they were readily available via entry points. Getting a good grasp of the whole serialization process took some dedicated reading through the ASDF docs 🧐.</p>
+<ul>
+<li>
+<p>Convertor Class: I implemented the convertor class, including the <code>to_yaml_tree</code> and <code>from_yaml_tree</code> methods. The former converts NDCube object attributes into a single node object suitable for serialization. Now, here&rsquo;s the super cool part the <code>.wcs</code> attribute of the NDCube object, being a complex object, is accommodated within the node, as the node is permitted to contain nested complex objects.
+<em>Viola!</em> , so I was able to leverage the existing convertor for GWCS objects which made the process somewhat less complicated. The latter method is exactly the opposite, it accepts a single node object from parsed YAML and returns the corresponding NDCube object.</p>
+</li>
+<li>
+<p>Schema and Manifests: The Schema was designed to validate the presence, and the datatype of the validator properties for the NDCube object. The manifest was implemented for acheiving the resource mapping of the schema.</p>
+</li>
+<li>
+<p>ASDF Integration: In entry_point.py, I&rsquo;ve implemented get_resource_mapping to retrieve mappings for schema and manifest files, required for ASDF file validation and identifying NDCube objects and the get_extension is implemented to retrieve extensions , here the extension through which the ndcube convertor was registered</p>
+</li>
+</ul>
+<h2 id="code-demonstration">Code Demonstration</h2>
+<h3 id="ndcube-initialised-with-gwcswcs-object-as-its-wcs-attribute">NDCube initialised with gwcs.WCS object as its &lsquo;.wcs&rsquo; attribute</h3>
+<blockquote>
+</blockquote>
+<pre><code>import numpy as np
+import asdf
+from astropy.time import Time
+from ndcube import NDCube
+from ndcube.extra_coords import QuantityTableCoordinate, TimeTableCoordinate
+import astropy.units as u
+
+
+energy = np.arange(10) * u.keV
+time = Time('2020-01-01 00:00:00') + np.arange(10) * u.s
+energy_coord = QuantityTableCoordinate(energy, names='energy', physical_types='em.energy')
+time_coord = TimeTableCoordinate(time, names='time', physical_types='time')
+
+# Initialize the GWCS object
+wcs = (time_coord &amp; energy_coord).wcs
+data = np.random.rand(len(time), len(energy))
+
+# Initialize the NDCube
+ndcube = NDCube(data, wcs=wcs)
+
+with asdf.AsdfFile() as af:
+    af.tree['ndcube'] = ndcube
+    af.write_to('ndcube.asdf')
+</code></pre>
+<h3 id="serialized-asdf-file">Serialized ASDF File</h3>
+<pre tabindex="0"><code>#ASDF 1.0.0
+#ASDF_STANDARD 1.5.0
+%YAML 1.1
+%TAG ! tag:stsci.edu:asdf/
+--- !core/asdf-1.1.0
+asdf_library: !core/software-1.0.0 {author: The ASDF Developers, homepage: &#39;http://github.com/asdf-format/asdf&#39;,
+  name: asdf, version: 3.0.1}
+history:
+  extensions:
+  - !core/extension_metadata-1.0.0
+    extension_class: asdf.extension._manifest.ManifestExtension
+    extension_uri: asdf://asdf-format.org/core/extensions/core-1.5.0
+    software: !core/software-1.0.0 {name: asdf, version: 3.0.1}
+  - !core/extension_metadata-1.0.0
+    extension_class: asdf.extension._manifest.ManifestExtension
+    extension_uri: asdf://sunpy.org/extensions/ndcube-0.1.0
+    software: !core/software-1.0.0 {name: ndcube, version: 2.3.dev224+g04409b5.d20240605}
+  - !core/extension_metadata-1.0.0
+    extension_class: asdf_astropy._manifest.CompoundManifestExtension
+    extension_uri: asdf://astropy.org/core/extensions/core-1.5.0
+    software: !core/software-1.0.0 {name: asdf-astropy, version: 0.5.0}
+  - !core/extension_metadata-1.0.0
+    extension_class: asdf.extension._manifest.ManifestExtension
+    extension_uri: asdf://asdf-format.org/transform/extensions/transform-1.5.0
+    software: !core/software-1.0.0 {name: asdf-astropy, version: 0.5.0}
+  - !core/extension_metadata-1.0.0
+    extension_class: asdf.extension._manifest.ManifestExtension
+    extension_uri: asdf://asdf-format.org/astronomy/gwcs/extensions/gwcs-1.2.0
+    software: !core/software-1.0.0 {name: gwcs, version: 0.20.0}
+ndcube: &amp;id001 !&lt;tag:sunpy.org:ndcube/ndcube/NDCube-0.1.0&gt;
+  data: !core/ndarray-1.0.0
+    source: 0
+    datatype: float64
+    byteorder: little
+    shape: [10, 10]
+  extra_coords: !&lt;tag:sunpy.org:ndcube/extra_coords/extra_coords/ExtraCoords-0.1.0&gt;
+    dropped_tables: []
+    ndcube: *id001
+  wcs: !&lt;tag:stsci.edu:gwcs/wcs-1.2.0&gt;
+    name: &#39;&#39;
+    pixel_shape: null
+    steps:
+    - !&lt;tag:stsci.edu:gwcs/step-1.1.0&gt;
+      frame: !&lt;tag:stsci.edu:gwcs/frame-1.0.0&gt;
+        axes_names: [&#39;&#39;, &#39;&#39;]
+        axes_order: [0, 1]
+        axes_type: [PIXEL, PIXEL]
+        axis_physical_types: [&#39;custom:PIXEL&#39;, &#39;custom:PIXEL&#39;]
+        name: PixelFrame
+        naxes: 2
+        unit: [!unit/unit-1.0.0 pixel, !unit/unit-1.0.0 pixel]
+      transform: !transform/concatenate-1.2.0
+        forward:
+        - !transform/tabular-1.2.0
+          bounds_error: false
+          fill_value: .nan
+          inputs: [x]
+          lookup_table: !unit/quantity-1.1.0
+            unit: !unit/unit-1.0.0 s
+            value: !core/ndarray-1.0.0
+              source: 1
+              datatype: float64
+              byteorder: little
+              shape: [10]
+          method: linear
+          outputs: [y]
+          points:
+          - !unit/quantity-1.1.0
+            unit: !unit/unit-1.0.0 pixel
+            value: !core/ndarray-1.0.0
+              source: 2
+              datatype: float64
+              byteorder: little
+              shape: [10]
+        - !transform/tabular-1.2.0
+          bounds_error: false
+          fill_value: .nan
+          inputs: [x]
+          lookup_table: !unit/quantity-1.1.0
+            unit: !unit/unit-1.0.0 keV
+            value: !core/ndarray-1.0.0
+              source: 3
+              datatype: float64
+              byteorder: little
+              shape: [10]
+          method: linear
+          outputs: [y]
+          points:
+          - !unit/quantity-1.1.0
+            unit: !unit/unit-1.0.0 pixel
+            value: !core/ndarray-1.0.0
+              source: 4
+              datatype: float64
+              byteorder: little
+              shape: [10]
+        inputs: [x0, x1]
+        outputs: [y0, y1]
+    - !&lt;tag:stsci.edu:gwcs/step-1.1.0&gt;
+      frame: !&lt;tag:stsci.edu:gwcs/composite_frame-1.0.0&gt;
+        frames:
+        - !&lt;tag:stsci.edu:gwcs/temporal_frame-1.0.0&gt;
+          axes_names: [time]
+          axes_order: [0]
+          axis_physical_types: [time]
+          name: TemporalFrame
+          reference_frame: !time/time-1.1.0 2020-01-01 00:00:00.000
+          unit: [!unit/unit-1.0.0 s]
+        - !&lt;tag:stsci.edu:gwcs/frame-1.0.0&gt;
+          axes_names: [energy]
+          axes_order: [1]
+          axes_type: [CUSTOM]
+          axis_physical_types: [em.energy]
+          name: CoordinateFrame
+          naxes: 1
+          unit: [!unit/unit-1.0.0 keV]
+        name: CompositeFrame
+      transform: null
+...
+�BLK 0                             [TY*ߝ��R�4p}Q����?��#���?ȩȏ��?���#��?��ҩ��?*B��y�?ʱ�tv��?������?�fEp�X�?k1^}��?=���A�?�]����?
+�֜���?���H�?��)9�?{juoPW�?p�:����?0�T9��?w�A��?pWݫ	%�?�K#)cB�?�uv����?V����?���^�.�?��2���?���eQ�?^߁}���?�$6mwp�?�&amp;�&#34;��?N�;�[�?4�؅J3�?
+�� ��? =&gt;��ܨ?��#%�?J6F=s��?E��}.�?°���
+�?����Qa�?;��0�?vM���?q��ǖ&#39;�?�&lt;5��? G]�X�?��.���?��ɐ?�?j��G�L�?&lt;��&amp;��? ��q];I?�̱���?X�Dt�v�?Pҧ���?0�=�E��?����? O&gt;&gt;tGj?D.���#�?p�N����?,$�V)��?j��xƦ�?�v�h�?�&#34;�
+�p�?7S�0�?���ۢ`�?8YI�yְ?&#34;E��o��?J�G�8�?�W�����?����ـ�?t���o�?sg���?h�Ȝ���?�)�=g�?e/B/�?�2�;�?�~�xT��?s�S���?t�|1.��?�n��ʳ?��/�؛�?jd����?�oB���?Lz09��?�����?��ga��?`������?���kW��?���P7�?�|�F@�?Oq���?d���$�?&gt;�e�~�?�t�(�?�Ԓ���?&lt;�P����?���a�?�Q΢���?����?Ѳ�#[[�?� �^�X�?jC�����?�mJA��?�BLK 0               P       P       P?�N��{I�?N&#34;F98        �    �?`������?     @�	    @h�����@     @������@x�����@    &#34;@�BLK 0               P       P       P�����Z
+�η~�ZH              �?       @      @      @      @      @      @       @      &#34;@�BLK 0               P       P       P�����Z
+�η~�ZH              �?       @      @      @      @      @      @       @      &#34;@�BLK 0               P       P       P�����Z
+�η~�ZH              �?       @      @      @      @      @      @       @      &#34;@#ASDF BLOCK INDEX
+%YAML 1.1
+---
+- 4304
+- 5158
+- 5292
+- 5426
+- 5560
+...
+</code></pre><h2 id="gsoc-week-one-reflections">GSoC Week One: Reflections</h2>
+<p>My first week with GSoC has been a thrilling ride, full of learning and growth. The support from the community has been incredible. Looking forward to what lies ahead!🚀</p>
+<blockquote>
+<p>Perseverance is not a long race; it is many short races one after the other.</p>
+</blockquote>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:38967/post/getting-selected-for-gsoc_2024/"
+      ><span>Getting Selected for Google Summer of Code 2024</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:38967/">Piyush Sharma</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>
