@@ -1,0 +1,479 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en-us"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>GSoC [Week 02-03] Progress - Piyush Sharma</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="This blog post covers all the work done in the second and third week of Google Summer of Code.
+In the past weeks, my focus has been on enhancing the serialization support of NDCube by extending its support for ExtraCoords and GlobalCoords. After establishing serialization support for the fundamental attributes of the NDCube object—such as data and wcs—in the ASDF file format, the next logical step was extending this capability to include ExtraCoords and GlobalCoords object." />
+  <meta name="author" content="VEagle03" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://rukminim2.flixcart.com/image/850/1000/kz4gh3k0/poster/j/x/1/medium-cat-glasses-space-abstract-matte-finish-poster-original-imagb787bgsvyeg7.jpeg?q=90&amp;crop=false" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/linkedin.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="http://localhost:1313/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.127.0">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="http://localhost:1313/"
+      >Piyush Sharma</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/ViciousEagle03"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/piyushs_03"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/piyush-sharma-0b559a250"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="http://localhost:1313/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">GSoC [Week 02-03] Progress</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Jun 23, 2024</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>This blog post covers all the work done in the second and third week of Google Summer of Code.</p>
+<p>In the past weeks, my focus has been on enhancing the serialization support of NDCube by extending its support for ExtraCoords and GlobalCoords. After establishing serialization support for the fundamental attributes of the NDCube object—such as data and wcs—in the ASDF file format, the next logical step was extending this capability to include <code>ExtraCoords</code> and <code>GlobalCoords</code> object.</p>
+<h2 id="globalcoords-and-extracoords">GlobalCoords and ExtraCoords</h2>
+<p>ExtraCoords: The ExtraCoords attribute expand NDCube&rsquo;s capabilities by incorporating additional spatial or spectral coordinates beyond those defined by the primary WCS. It accommodate complex datasets needing extra dimensions or coordinates, such as spectroscopic data with folded axes.</p>
+<p>GlobalCoords: The GlobalCoords attribute are coordinates in an NDCube that provides universal context across the entire dataset and apply uniformly across all axes. It captures metadata such as observation times or global positional coordinates of the NDCube object.</p>
+<h2 id="extending-the-serialization-support">Extending the Serialization support</h2>
+<p>Now, <code>ExtraCoords</code> can be initialized by specifying a <code>BaseLowLevelWCS</code> object and a mapping, or by building it up using one or more lookup tables. To support the latter method, I had to ensure the <code>lookup_tables</code> were properly preserved during serialization. For this purpose, I designed the schema and wrote the converter class for the following objects:</p>
+<ul>
+<li>ndcube.extra_coords.extra_coords.ExtraCoords</li>
+<li>ndcube.extra_coords.table_coord.TimeTableCoordinate</li>
+<li>ndcube.extra_coords.table_coord.QuantityTableCoordinate</li>
+<li>ndcube.extra_coords.table_coord.SkyCoordTableCoordinate</li>
+</ul>
+<p>The initialization of <code>GlobalCoords</code> is more straightforward, which required me to design the schema and write the converter class for the following object:</p>
+<ul>
+<li>ndcube.global_coords.GlobalCoords</li>
+</ul>
+<blockquote>
+<p>Here&rsquo;s an example of the <code>ExtraCoords</code> Schema</p>
+</blockquote>
+<pre tabindex="0"><code>%YAML 1.1
+---
+$schema: &#34;http://stsci.edu/schemas/yaml-schema/draft-01&#34;
+id: &#34;asdf://sunpy.org/ndcube/schemas/extra_coords-0.1.0&#34;
+
+title:
+Represents the ndcube ExtraCoords object
+
+description:
+Represents the ndcube ExtraCoords object
+
+type: object
+properties:
+wcs:
+    tag: &#34;tag:stsci.edu:gwcs/wcs-1.*&#34;
+mapping:
+    type: array
+lookup_tables:
+    type: array
+    items:
+        type: array
+        items:
+            - oneOf:
+            - type: number
+            - type: array
+            - oneOf:
+            - tag: &#34;tag:sunpy.org:ndcube/extra_coords/table_coord/quantitytablecoordinate-0.*&#34;
+            - tag: &#34;tag:sunpy.org:ndcube/extra_coords/table_coord/skycoordtablecoordinate-0.*&#34;
+            - tag: &#34;tag:sunpy.org:ndcube/extra_coords/table_coord/timetablecoordinate-0.*&#34;
+dropped_tables:
+    type: array
+ndcube:
+    tag: &#34;tag:sunpy.org:ndcube/ndcube/ndcube-0.*&#34;
+
+required: [ndcube]
+additionalProperties: false
+...
+</code></pre><h2 id="whats-new-keeping-up-with-the-coords">What&rsquo;s new: Keeping Up with the Coords</h2>
+<p><img src="/images/ASDF-ser-new-type.png" alt="img"></p>
+<p>Now, when we save an NDCube object to an ASDF file, the file successfully stores the <code>ExtraCoords</code> and <code>GlobalCoords</code> information, which is preserved when we deserialize and generate a new NDCube object by reading the file. The only thing that is still not supported is initializing an ExtraCoords object using a mapping and an <code>astropy.wcs.WCS</code> object. This feature will be supported in the future when I implement serialization support for <code>astropy.wcs.WCS</code> in the asdf-astropy library.</p>
+<h4 id="saving-an-ndcube-with-globalcoords-and-extracoords-attribute">Saving an NDCube with <code>GlobalCoords</code> and <code>ExtraCoords</code> attribute</h4>
+<pre><code>with asdf.open('ndcubeglobal_extra.asdf') as af:
+    ndcube2 = af.tree['ndcube']
+</code></pre>
+<h4 id="the-relevant-asdf-file-block">The relevant ASDF file block</h4>
+<pre><code>extra_coords: !&lt;tag:sunpy.org:ndcube/extra_coords/extra_coords/extracoords-0.1.0&gt;
+    dropped_tables: []
+    lookup_tables:
+    - - 0
+    - !&lt;tag:sunpy.org:ndcube/extra_coords/table_coord/timetablecoordinate-0.1.0&gt;
+        mesh: false
+        names: [time]
+        reference_time: !time/time-1.1.0 {base_format: fits, value: '2000-01-01T00:00:00.000'}
+        table: !time/time-1.1.0
+        base_format: fits
+        value: !core/ndarray-1.0.0
+            byteorder: little
+            datatype: [ucs4, 23]
+            shape: [10]
+            source: 5
+    - - 0
+    - !&lt;tag:sunpy.org:ndcube/extra_coords/table_coord/skycoordtablecoordinate-0.1.0&gt;
+        mesh: false
+        names: [lon, lat]
+        table: !&lt;tag:astropy.org:astropy/coordinates/skycoord-1.0.0&gt;
+        dec: !&lt;tag:astropy.org:astropy/coordinates/latitude-1.0.0&gt;
+            unit: !unit/unit-1.0.0 deg
+            value: !core/ndarray-1.0.0
+            byteorder: little
+            datatype: float64
+            shape: [10]
+            source: 7
+        frame: icrs
+        ra: !&lt;tag:astropy.org:astropy/coordinates/longitude-1.0.0&gt;
+            unit: !unit/unit-1.0.0 deg
+            value: !core/ndarray-1.0.0
+            byteorder: little
+            datatype: float64
+            shape: [10]
+            source: 6
+            wrap_angle: !&lt;tag:astropy.org:astropy/coordinates/angle-1.0.0&gt; {datatype: float64,
+            unit: !unit/unit-1.0.0 deg, value: 360.0}
+        representation_type: spherical
+    - - 1
+    - !&lt;tag:sunpy.org:ndcube/extra_coords/table_coord/quantitytablecoordinate-0.1.0&gt;
+        mesh: true
+        names: [exposure_time]
+        table:
+        - !unit/quantity-1.1.0
+        unit: !unit/unit-1.0.0 s
+        value: !core/ndarray-1.0.0
+            byteorder: little
+            datatype: float64
+            shape: [10]
+            source: 8
+        unit: !unit/unit-1.0.0 s
+    ndcube: *id001
+global_coords: !&lt;tag:sunpy.org:ndcube/global_coords/globalcoords-0.1.0&gt;
+    internal_coords:
+    name1:
+    - custom:physical_type1
+    - !unit/quantity-1.1.0 {datatype: float64, unit: !unit/unit-1.0.0 m, value: 1.0}
+    name2:
+    - custom:physical_type2
+    - !unit/quantity-1.1.0 {datatype: float64, unit: !unit/unit-1.0.0 s, value: 2.0}
+    ndcube: *id001
+</code></pre>
+<p>During my coding period, my mentors have been incredibly helpful, and huge thanks to <a href="https://github.com/braingram">@braingram</a> for explaining and ensuring I understood the entire ASDF serialization process thoroughly. I learned a lot about schema design and JSON schema. I was particularly impressed by the <a href="https://docs.github.com/en/actions/using-workflows">CI workflows</a>, when I set up a dedicated schema testing workflow. It showed me how automated testing can catch errors that manual testing might overlook. Although I implemented a straightforward workflow, it go me curious about learning more about CI workflows.</p>
+<p>I am currently adding tests for the new serialization support in NDCube, which I plan to finish by the next coding week.</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/post/community-bonding-and-week-01/"
+      ><span>Community Bonding and Week 01 Progress</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">Piyush Sharma</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

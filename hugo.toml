@@ -13,7 +13,7 @@ theme = 'paper'
   # home page profile
   avatar = "https://rukminim2.flixcart.com/image/850/1000/kz4gh3k0/poster/j/x/1/medium-cat-glasses-space-abstract-matte-finish-poster-original-imagb787bgsvyeg7.jpeg?q=90&crop=false"
   name = 'VEagle03'
-  bio = "Hey there! Welcome to my blog. Stay tuned for updates and posts coming your way soon!"
+  bio = "Hey there! Welcome to my blog."
 
 [[menu.main]]
     name = "Home"

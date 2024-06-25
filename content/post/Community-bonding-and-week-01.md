@@ -32,7 +32,7 @@ My projects aims to enable the storage and retrieval of NDCube objects using the
 In our meeting, we discussed the initial steps,  which centered around laying the groundwork for serialization support for the NDCube object, particularly focusing on establishing basic functionality. This included implementing the convertor class, registering the convertors as ASDF extensions, and ensuring they were readily available via entry points. Getting a good grasp of the whole serialization process took some dedicated reading through the ASDF docs 🧐.
 
    - Convertor Class: I implemented the convertor class, including the `to_yaml_tree` and `from_yaml_tree` methods. The former converts NDCube object attributes into a single node object suitable for serialization. Now, here's the super cool part the `.wcs` attribute of the NDCube object, being a complex object, is accommodated within the node, as the node is permitted to contain nested complex objects. 
-   _Viola!_ , so I was able to leverage the existing convertor for GWCS objects which made the process somewhat less complicated. The latter method is exactly the opposite, it accepts a single node object from parsed YAML and returns the corresponding NDCube object.
+   _Viola!_, so I was able to leverage the existing convertor for GWCS objects which made the process somewhat less complicated. The latter method is exactly the opposite, it accepts a single node object from parsed YAML and returns the corresponding NDCube object.
 
    - Schema and Manifests: The Schema was designed to validate the presence, and the datatype of the validator properties for the NDCube object. The manifest was implemented for acheiving the resource mapping of the schema.
 

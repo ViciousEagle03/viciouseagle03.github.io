@@ -307,7 +307,7 @@ Community Bonding Period After the euphoria of being accepted into GSoC faded, i
 <ul>
 <li>
 <p>Convertor Class: I implemented the convertor class, including the <code>to_yaml_tree</code> and <code>from_yaml_tree</code> methods. The former converts NDCube object attributes into a single node object suitable for serialization. Now, here&rsquo;s the super cool part the <code>.wcs</code> attribute of the NDCube object, being a complex object, is accommodated within the node, as the node is permitted to contain nested complex objects.
-<em>Viola!</em> , so I was able to leverage the existing convertor for GWCS objects which made the process somewhat less complicated. The latter method is exactly the opposite, it accepts a single node object from parsed YAML and returns the corresponding NDCube object.</p>
+<em>Viola!</em>, so I was able to leverage the existing convertor for GWCS objects which made the process somewhat less complicated. The latter method is exactly the opposite, it accepts a single node object from parsed YAML and returns the corresponding NDCube object.</p>
 </li>
 <li>
 <p>Schema and Manifests: The Schema was designed to validate the presence, and the datatype of the validator properties for the NDCube object. The manifest was implemented for acheiving the resource mapping of the schema.</p>
@@ -494,6 +494,12 @@ ndcube: &amp;id001 !&lt;tag:sunpy.org:ndcube/ndcube/NDCube-0.1.0&gt;
   
   
   <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="http://localhost:1313/post/week-02-03-progress/"
+      ><span class="mr-1.5">←</span><span>GSoC [Week 02-03] Progress</span></a
+    >
     
     
     <a
