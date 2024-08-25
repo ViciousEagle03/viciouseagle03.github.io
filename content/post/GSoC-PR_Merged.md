@@ -33,7 +33,7 @@ date = 2024-08-24T16:47:02+05:30
 
 #### PR #235: [Support serialization of astropy.wcs.WCS objects to ASDF](https://github.com/astropy/asdf-astropy/pull/235)
 #### (Yet to be Merged)
- - This PR adds the support for serializing `astropy.wcs.WCS` and `astropy.wcs.wcsapi.SlicedLowLevelWCS` objects to ASDF. This would enable any `ndcube.NDCube` objects to be serialized to ASDF with the underlying wcs as `astropy.wcs.WCS` and any sliced `ndcube.NDCube` objects be serialized to ASDF with proper wcs preservation. 
+ - This PR introduces support for serializing `astropy.wcs.WCS` and `astropy.wcs.wcsapi.SlicedLowLevelWCS` objects to ASDF format. With this enhancement, any `ndcube.NDCube` objects can be serialized to ASDF while preserving the underlying WCS as `astropy.wcs.WCS`. Additionally, it ensures that sliced `ndcube.NDCube` objects maintain proper WCS preservation when serialized and are restored correctly upon deserialization.
 
 #### PR #239: [Add serialization logic for uncertainty objects](https://github.com/astropy/asdf-astropy/pull/239)
 #### (Yet to be Merged)
