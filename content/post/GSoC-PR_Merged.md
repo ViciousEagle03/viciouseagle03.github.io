@@ -10,7 +10,7 @@ date = 2024-08-24T16:47:02+05:30
 ---
 > The PRs were filed in accordance with the tasks recorded in the GitHub [task-tab](https://github.com/orgs/sunpy/projects/12).
 
-## NDCube 
+## NDCube
 
 #### PR #708: [Asdf-Support](https://github.com/sunpy/ndcube/pull/708) 
 #### (Merged)
