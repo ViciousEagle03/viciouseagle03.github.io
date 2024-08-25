@@ -21,7 +21,7 @@ date = 2024-08-24T16:47:02+05:30
 #### (Yet to be Merged)
  - This PR introduces serialization support for `ndcube` WCS wrappers, including `CompoundLowLevelWCS`, `ResampledLowLevelWCS` and `ReorderedLowLevelWCS`, allowing them to be saved in ASDF format.
 
-#### PR #756: [Add serialization logic for the NDCubeSequence and NDCollection](https://github.com/sunpy/ndcube/pull/756) 
+#### PR #756: [Add serialization logic for the NDCubeSequence and NDCollection](https://github.com/sunpy/ndcube/pull/756)
 #### (Yet to be Merged)
  - This PR introduces serialization support for `NDCubeSequence` and `NDCollection` objects, enabling their conversion to and from ASDF format.
 
